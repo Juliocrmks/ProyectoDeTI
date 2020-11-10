@@ -6,22 +6,17 @@ from OK import oki
 import sys
 import os
 
+
 def agregar_cemita(self):
 
     c = {"name": "Cemita",
          "price": 60,
          "id": 000
     }
-    x = self.total.get() + 60
-    self.total.set(x)
-    self.totallabel.grid(column=1, row=0, padx=10, pady=10)
+    self.total += 60
     self.orden.append(c)
     imprimir_orden(self)
 
-
-def cemita_plus(self):
-    x = self.total.get() + 60
-    self.total.set(x)
 
 def agregar_chile_en_nogada(self):
     ch = {'name': 'Chile En Nogada',
@@ -128,6 +123,7 @@ def cancel(self):
 
 
 def imprimir_orden(self):
+    self.labelNumTotal.configure(text=str(self.total))
     n = len(self.orden)
     i = 0
     self.frameText.rowconfigure(n)
@@ -175,8 +171,7 @@ class geneRepo:
     def __init__(self):
         self.root = Tk()
         self.root.title("Generar Reporte")
-        self.total = IntVar()
-        self.total.set(0)
+        self.total = 0
 
         # le vamos a cambiar los colores para que se vea bonito
 
@@ -222,8 +217,8 @@ class geneRepo:
                                      command=lambda: agregar_refrescos(self), bg='#588157', foreground="#ffffff")
         self.buttonAguaDeSabor = Button(self.frameButtons1, text="Agua De\nSabor", pady=10, padx=10,
                                         command=lambda: agregar_agua_de_sabor(self), bg='#588157', foreground="#ffffff")
-        self.labeltotal = Label(self.frameButtons2, text= "Total: ", pady=10, padx=10, bg="#344e41", foreground="#ffffff")
-        self.totallabel = Entry(self.frameButtons2, textvariable= str(self.total), bg="#344e41", foreground="#ffffff")
+        self.labeltotal = Label(self.frameButtons2, text="Total: ", pady=10, padx=10, bg="#344e41", foreground="#ffffff")
+        self.labelNumTotal = Label(self.frameButtons2, text=str(self.total), bg="#344e41", foreground="#ffffff")
         self.buttonAccept = Button(self.frameButtons2, text="  Aceptar  ", pady=10, padx=5, command=lambda: accept(self),
                                    bg='#109401', foreground="#ffffff")
         self.buttonCancel = Button(self.frameButtons2, text="  Cancelar  ", pady=10, padx=5, command=lambda: cancel(self),
@@ -241,7 +236,7 @@ class geneRepo:
         self.buttonAguaDeSabor.grid(row=4, column=1, padx=10, pady=10)
 
         self.labeltotal.grid(column=0, row=0, padx=10, pady=10)
-        self.totallabel.grid(column=1, row=0, padx=10, pady=10)
+        self.labelNumTotal.grid(column=1, row=0, padx=10, pady=10)
         self.buttonAccept.grid(column=2, row=0, padx=10, pady=10)
         self.buttonCancel.grid(column=3, row=0, padx=10, pady=10)
         
