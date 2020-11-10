@@ -1,14 +1,13 @@
-from tkinter import *
 import tkinter as tk
-from tkinter import ttk
+
 
 def create_window_2020(self):
     root = tk.Tk()
     root.title("Registro")
-    container = ttk.Frame(root)
+    container = tk.Frame(root)
     canvas = tk.Canvas(container)
-    scrollbar = ttk.Scrollbar(container, orient= "vertical", command= canvas.yview)
-    scrollable_frame = ttk.Frame(canvas)
+    scrollbar = tk.Scrollbar(container, orient= "vertical", command= canvas.yview)
+    scrollable_frame = tk.Frame(canvas)
 
     scrollable_frame.bind(
         "<Configure>",
@@ -30,7 +29,7 @@ def create_window_2020(self):
     #     button = Button(text=textforButton).grid
 
     for i in range(50):
-        ttk.Label(scrollable_frame, text="Sample scrolling label").pack()
+        tk.Label(scrollable_frame, text="Sample scrolling label").pack()
 
     container.pack()
     canvas.pack(side="left", fill="both", expand=True)
@@ -39,57 +38,57 @@ def create_window_2020(self):
     root.mainloop()
 
 def create_window_2021(self):
-    toplevel = Toplevel()
+    toplevel = tk.Toplevel()
     toplevel.title('2021')
     toplevel.geometry('400x400')
     toplevel.focus_set()
     toplevel.configure(background='#344e41')
-    toplevel.scrollbar = tk.Scrollbar(toplevel, orient=VERTICAL)
+    toplevel.scrollbar = tk.Scrollbar(toplevel, orient="vertical")
     toplevel.scrollbar.grid(row="0", column="1", sticky="E")
 
 def create_window_2022(self):
-    toplevel = Toplevel()
+    toplevel = tk.Toplevel()
     toplevel.title('2022')
     toplevel.geometry('400x400')
     toplevel.focus_set()
     toplevel.configure(background='#344e41')
-    toplevel.scrollbar = tk.Scrollbar(toplevel, orient=VERTICAL)
+    toplevel.scrollbar = tk.Scrollbar(toplevel, orient="vertical")
     toplevel.scrollbar.grid(row="0", column="1", sticky="E")
 
 def create_window_2023(self):
-    toplevel = Toplevel()
+    toplevel = tk.Toplevel()
     toplevel.title('2023')
     toplevel.geometry('400x400')
     toplevel.focus_set()
     toplevel.configure(background='#344e41')
-    toplevel.scrollbar = tk.Scrollbar(toplevel, orient=VERTICAL)
+    toplevel.scrollbar = tk.Scrollbar(toplevel, orient="vertical")
     toplevel.scrollbar.grid(row="0", column="1", sticky="E")
 
 def create_window_2024(self):
-    toplevel = Toplevel()
+    toplevel = tk.Toplevel()
     toplevel.title('2024')
     toplevel.geometry('400x400')
     toplevel.focus_set()
     toplevel.configure(background='#344e41')
-    toplevel.scrollbar = tk.Scrollbar(toplevel, orient=VERTICAL)
+    toplevel.scrollbar = tk.Scrollbar(toplevel, orient="vertical")
     toplevel.scrollbar.grid(row="0", column="1", sticky="E")
 
 def create_window_2025(self):
-    toplevel = Toplevel()
+    toplevel = tk.Toplevel()
     toplevel.title('2025')
     toplevel.geometry('400x400')
     toplevel.focus_set()
     toplevel.configure(background='#344e41')
-    toplevel.scrollbar = tk.Scrollbar(toplevel, orient=VERTICAL)
+    toplevel.scrollbar = tk.Scrollbar(toplevel, orient="vertical")
     toplevel.scrollbar.grid(row="0", column="1", sticky="E")
 
 def create_window_2026(self):
-    toplevel = Toplevel()
+    toplevel = tk.Toplevel()
     toplevel.title('2026')
     toplevel.geometry('400x400')
     toplevel.focus_set()
     toplevel.configure(background='#344e41')
-    toplevel.scrollbar = tk.Scrollbar(toplevel, orient=VERTICAL)
+    toplevel.scrollbar = tk.Scrollbar(toplevel, orient="vertical")
     toplevel.scrollbar.grid(row="0", column="1", sticky="E")
 
 def cerrar(self):
@@ -100,7 +99,7 @@ class Register:
 
         self.screen = tk.Tk()
         self.screen.title("Registro de pedidos")
-        self.screen.geometry('300x400')
+        self.screen.geometry('225x400')
         self.screen.configure(background='#344e41')
 
         self.text = tk.Label(self.screen, text="Selcciona año", fg="white", bg="#344e41")
