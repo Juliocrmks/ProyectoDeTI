@@ -1,0 +1,21 @@
+{
+    "default": {
+        "default": {
+            "default": 0
+        }
+    },
+    "09/11/2020 17:31.44": {
+        "item0": {
+            "name": "Cemita",
+            "price": 60,
+            "id": 0
+        }
+    },
+    "09/11/2020 17:44.43": {
+        "item0": {
+            "name": "Cemita",
+            "price": 60,
+            "id": 0
+        }
+    }
+}
