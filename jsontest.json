@@ -1,101 +1,46 @@
 {
-    "EdgarSelacome2": [
+    "11/11/2020_17:24.32": [
         {
             "item1": {
-                "id": 0,
                 "name": "Cemita",
-                "price": 60
-            }
-        },
-        {
-            "total": 4000
-        }
-    ],
-    "EdgarSelacome3": [
-        {
-            "item1": {
-                "id": 0,
-                "name": "Cemita",
-                "price": 60
-            }
-        },
-        {
-            "total": 4000
-        }
-    ],
-    "EdgarSelacome4": [
-        {
-            "item1": {
-                "id": 0,
-                "name": "Cemita",
-                "price": 60
-            }
-        },
-        {
-            "total": 4000
-        }
-    ],
-    "EdgarSelacome5": [
-        {
-            "item1": {
-                "id": 0,
-                "name": "Cemita",
-                "price": 60
-            }
-        },
-        {
-            "total": 4000
-        }
-    ],
-    "10/11/2020_19:32.18": [
-        {
-            "item0": {
+                "price": 60,
+                "id": 0
+            },
+            "item2": {
                 "name": "Chile En Nogada",
                 "price": 250,
                 "id": 100
             },
-            "item1": {
+            "item3": {
                 "name": "Molotes",
                 "price": 55,
                 "id": 500
             }
         },
         {
-            "total": 305
+            "total": 365
         }
     ],
-    "10/11/2020_20:11.27": [
+    "11/11/2020_17:47.04": [
         {
-            "item0": {
+            "item1": {
+                "name": "Enchiladas De Pipian",
+                "price": 40,
+                "id": 600
+            },
+            "item2": {
+                "name": "Tortitas De Santa Clara",
+                "price": 15,
+                "id": 700
+            },
+            "item3": {
                 "name": "Agua De Sabor",
                 "price": 15,
                 "id": 900
-            },
-            "item1": {
-                "name": "Refrescos",
-                "price": 20,
-                "id": 800
             }
         },
         {
-            "total": 35
-        }
-    ],
-    "10/11/2020_20:11.29": [
-        {
-            "item0": {
-                "name": "Chalupa",
-                "price": 35,
-                "id": 200
-            },
-            "item1": {
-                "name": "Mole Poblano",
-                "price": 60,
-                "id": 300
-            }
-        },
-        {
-            "total": 95
+            "total": 70
         }
     ]
 }

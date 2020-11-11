@@ -148,7 +148,7 @@ def saveToJson(self):
     platillo = {}
     pedido = {}
     lista =[]
-    i = 0
+    i = 1
     for item in self.orden:
         platillo['item' + str(i)] = item
         i=i+1
@@ -157,11 +157,6 @@ def saveToJson(self):
     self.orden[-1] = totalDict
     lista.append(totalDict)
     print(totalDict)
-
-
-
-
-
 
     pedido[id] = lista
     with open(filename,'r+') as read_file:
@@ -173,7 +168,7 @@ def saveToJson(self):
     
 
 
-#no se usa
+# no se usa
 def imprimirRegistros(self):
      filename = "jsontest.json"
      with open(filename, "r+") as f:
