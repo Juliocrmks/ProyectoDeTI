@@ -40,19 +40,20 @@ def create_window_2020(self):
         # counter = 1
         # for item in data:
         #     itemName = data[item][0]['item'+ str(counter)]['name']
-        #     buttonChalupas = tk.Button(scrollable_frame, text=itemName, pady=20, padx=10, bg='#588157', foreground="#ffffff").pack()
+        #     buttonAbrirPedidos = tk.Button(scrollable_frame, text=itemName, pady=20, padx=10, bg='#588157', foreground="#ffffff").pack()
         #     counter +=1
         data = json.load(f)
         for item in data:
+
             id = item
-            buttonChalupas = tk.Button(scrollable_frame, text=item, pady=20, padx=10, bg='#588157',
-                                       foreground="#ffffff", command=lambda: open_order_resp(self, id)).pack()
+            buttonAbrirPedidos = tk.Button(scrollable_frame, text=item, pady=20, padx=10, bg='#588157',
+                                           foreground="#ffffff", command=lambda i=item: open_order_resp(self, i)).pack()
 
             # for dish in data[item]:
             #     if counter != len(data[item]):
             #         itemName = item
             #         # itemName = dish['item'+ str(counter)]['name']
-            #         buttonChalupas = tk.Button(scrollable_frame, text=itemName, pady=20, padx=10, bg='#588157', foreground="#ffffff").pack()
+            #         buttonAbrirPedidos = tk.Button(scrollable_frame, text=itemName, pady=20, padx=10, bg='#588157', foreground="#ffffff").pack()
             #         counter +=1
     
         
@@ -125,7 +126,7 @@ class Register:
 
         self.screen = tk.Tk()
         self.screen.title("Registro de pedidos")
-        self.screen.geometry('225x400')
+        self.screen.geometry('237x370')
         self.screen.configure(background='#344e41')
 
         self.text = tk.Label(self.screen, text="Selcciona año", fg="white", bg="#344e41")
