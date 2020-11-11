@@ -139,17 +139,33 @@ def imprimir_orden(self):
 
 def generate_id(self):
     today = datetime.datetime.now()
-    return today.strftime("%d/%m/%Y %H:%M.%S")
+    return today.strftime("%d/%m/%Y_%H:%M.%S")
 
 
 def saveToJson(self):
+    today = datetime.datetime.now()
+    x = today.strftime("%Y")
+    if x == "2020":
+        filename = "2020.json"
+    elif x == "2021":
+        filename = "2021.json"
+    elif x == "2022":
+        filename = "2022.json"
+    elif x == "2023":
+        filename = "2023.json"
+    elif x == "2024":
+        filename = "2024.json"
+    elif x == "2025":
+        filename = "2025.json"
+    elif x == "2026":
+        filename = "2026.json"
     id = generate_id(self)
-    filename = "jsontest.json"
+    # filename = "jsontest.json"
     platillo = {}
     pedido = {}
     i = 0
     for item in self.orden:
-        platillo['item' + str(i)] = item
+        platillo['item' + str(i+1)] = item
         i=i+1
 
     pedido[id] = platillo
