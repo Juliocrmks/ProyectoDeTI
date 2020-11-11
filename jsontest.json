@@ -63,5 +63,39 @@
         {
             "total": 305
         }
+    ],
+    "10/11/2020_20:11.27": [
+        {
+            "item0": {
+                "name": "Agua De Sabor",
+                "price": 15,
+                "id": 900
+            },
+            "item1": {
+                "name": "Refrescos",
+                "price": 20,
+                "id": 800
+            }
+        },
+        {
+            "total": 35
+        }
+    ],
+    "10/11/2020_20:11.29": [
+        {
+            "item0": {
+                "name": "Chalupa",
+                "price": 35,
+                "id": 200
+            },
+            "item1": {
+                "name": "Mole Poblano",
+                "price": 60,
+                "id": 300
+            }
+        },
+        {
+            "total": 95
+        }
     ]
 }
