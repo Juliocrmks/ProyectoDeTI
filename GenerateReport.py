@@ -139,7 +139,7 @@ def imprimir_orden(self):
 
 def generate_id(self):
     today = datetime.datetime.now()
-    return today.strftime("%d/%m/%Y %H:%M.%S")
+    return today.strftime("%d/%m/%Y_%H:%M.%S")
 
 
 def saveToJson(self):
@@ -147,17 +147,31 @@ def saveToJson(self):
     filename = "jsontest.json"
     platillo = {}
     pedido = {}
+    lista =[]
     i = 0
     for item in self.orden:
         platillo['item' + str(i)] = item
         i=i+1
+    lista.append(platillo)   
+    totalDict = {'total':self.total}
+    self.orden[-1] = totalDict
+    lista.append(totalDict)
+    print(totalDict)
 
-    pedido[id] = platillo
+
+
+
+
+
+    pedido[id] = lista
     with open(filename,'r+') as read_file:
         data = json.load(read_file)
         data.update(pedido)
         read_file.seek(0)
         json.dump(data, read_file, indent=4)
+
+    
+
 
 #no se usa
 def imprimirRegistros(self):

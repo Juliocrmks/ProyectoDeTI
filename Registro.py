@@ -1,4 +1,5 @@
 import tkinter as tk
+import json 
 
 
 def create_window_2020(self):
@@ -28,8 +29,23 @@ def create_window_2020(self):
     #     labeltotal = data[item][-1]['total']
     #     button = Button(text=textforButton).grid
 
-    for i in range(50):
-        tk.Label(scrollable_frame, text="Sample scrolling label").pack()
+    with open('jsontest.json','r') as f:
+        # data = json.load(f)
+        # counter = 1
+        # for item in data:
+        #     itemName = data[item][0]['item'+ str(counter)]['name']
+        #     buttonChalupas = tk.Button(scrollable_frame, text=itemName, pady=20, padx=10, bg='#588157', foreground="#ffffff").pack()
+        #     counter +=1
+        data = json.load(f)
+        for item in data:
+            counter =1
+            for dish in data[item]:
+                if counter != len(data[item]): 
+                    itemName = dish['item'+ str(counter)]['name']
+                    buttonChalupas = tk.Button(scrollable_frame, text=itemName, pady=20, padx=10, bg='#588157', foreground="#ffffff").pack()
+                    counter +=1
+    
+        
 
     container.pack()
     canvas.pack(side="left", fill="both", expand=True)
