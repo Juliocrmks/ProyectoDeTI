@@ -1,14 +1,20 @@
 import tkinter as tk
 import json 
+from reportePedido import reportePedido
 
+
+def open_order_resp(self, id):
+    pedidoEspecifico = reportePedido(id)
+    pedidoEspecifico.ventana.mainloop()
+    
 
 def create_window_2020(self):
     root = tk.Tk()
     root.title("Registro")
     container = tk.Frame(root)
-    canvas = tk.Canvas(container)
-    scrollbar = tk.Scrollbar(container, orient= "vertical", command= canvas.yview)
-    scrollable_frame = tk.Frame(canvas)
+    canvas = tk.Canvas(container, bg="#344e41")
+    scrollbar = tk.Scrollbar(container, orient="vertical", command=canvas.yview)
+    scrollable_frame = tk.Frame(canvas, bg="#344e41")
 
     scrollable_frame.bind(
         "<Configure>",
@@ -38,12 +44,16 @@ def create_window_2020(self):
         #     counter +=1
         data = json.load(f)
         for item in data:
-            counter =1
-            for dish in data[item]:
-                if counter != len(data[item]): 
-                    itemName = dish['item'+ str(counter)]['name']
-                    buttonChalupas = tk.Button(scrollable_frame, text=itemName, pady=20, padx=10, bg='#588157', foreground="#ffffff").pack()
-                    counter +=1
+            id = item
+            buttonChalupas = tk.Button(scrollable_frame, text=item, pady=20, padx=10, bg='#588157',
+                                       foreground="#ffffff", command=lambda: open_order_resp(self, id)).pack()
+
+            # for dish in data[item]:
+            #     if counter != len(data[item]):
+            #         itemName = item
+            #         # itemName = dish['item'+ str(counter)]['name']
+            #         buttonChalupas = tk.Button(scrollable_frame, text=itemName, pady=20, padx=10, bg='#588157', foreground="#ffffff").pack()
+            #         counter +=1
     
         
 
