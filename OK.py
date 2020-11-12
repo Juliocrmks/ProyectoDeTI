@@ -1,8 +1,11 @@
 import tkinter as tk
+# funcion para el boton de cerrar
 
 def boton_Cerrar(self):
     self.ventana.destroy()
 
+
+# clase para confirmar que se ha guardado el reporte
 class oki:
     def __init__(self):
         self.ventana = tk.Tk()
