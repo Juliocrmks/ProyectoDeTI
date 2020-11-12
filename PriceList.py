@@ -1,16 +1,17 @@
 import tkinter as tk
 
 
+# funcion para cerrar
 def cerrar(self):
     self.ventana.destroy()
 
 
-
+# clase para imprimier la lista de precios
 class list:
     def __init__(self):
         self.ventana = tk.Tk()
         self.ventana.title("Lista de Precios")
-        self.ventana.geometry('570x780')
+        self.ventana.geometry('410x735')
         self.ventana.configure(background='#344e41')
 
         # linea de arriba
@@ -91,7 +92,5 @@ class list:
         self.total8.grid(row=9, column=4, padx=20, pady=20)
         self.total9.grid(row=10, column=4, padx=20, pady=20)
         # boton
-        self.botoncerrar = tk.Button(self.ventana, text="Cerrar", bg="red", fg="black", command=lambda: cerrar(self))
-        self.botoncerrar.grid(row=11, column=3, padx=20, pady=20)
-        self.botonatras = tk.Button(self.ventana, text="Atras", fg="black", command=lambda: cerrar(self))
-        self.botonatras.grid(row=11, column=1, padx=20, pady=20)
+        self.botoncerrar = tk.Button(self.ventana, text="Cerrar", bg="red", fg="white", command=lambda: cerrar(self))
+        self.botoncerrar.grid(row=11, column=2, padx=20, pady=20)

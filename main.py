@@ -3,31 +3,38 @@ from GenerateReport import geneRepo
 from PriceList import list
 from Registro import Register
 
+
+# funcion para abrir el registro
 def openRegistro():
     Registro = Register()
     Registro.screen.mainloop
 
+
+# funcion para abrir el generador de reportes
 def openGenerate():
     generate = geneRepo()
     generate.root.mainloop
 
 
+# funcion para abrir la lista de comidas
 def openList():
     open = list()
     open.ventana.mainloop
 
 
+# main
 if __name__ == '__main__':
     root = Tk()
-    root.title("Proyecto V0.6")
+    root.title("Proyecto V0.9.5")
 
+    # Marco principal de la pantalla
     frameMain = Frame(root, height=400, width=800, bg="#344e41")
     frameMain.rowconfigure(3)
     frameMain.columnconfigure(3)
 
     frameTitle = Frame(frameMain, bg="#344e41")
 
-    labelTitle = Label(frameTitle, text="Nombre \ndel\n Negocio", bg='#344e41', foreground='#ffffff', relief='raised',
+    labelTitle = Label(frameTitle, text="Antojitos\nPoblanos", bg='#344e41', foreground='#ffffff', relief='raised',
                        font=('Arial', 22))
 
     frameButtons = Frame(frameMain, bg="#344e41")
@@ -38,6 +45,7 @@ if __name__ == '__main__':
     labelTitle.grid()
     frameButtons.grid(row=1, column=1, columnspan=3, sticky='nswe')
 
+    # Botones para escoger
     buttonList = Button(frameButtons, text="Lista de precios", pady=30, padx=15, bg="#588157", foreground='#ffffff'
                         , font=('Arial', 12), command=lambda: openList())
     buttonOrders = Button(frameButtons, text="Registro de pedidos", pady=30, padx=15, bg='#588157', foreground='#ffffff'
