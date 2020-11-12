@@ -248,7 +248,7 @@ class geneRepo:
         self.labelNumTotal = Label(self.frameButtons2, text=str(self.total), bg="#344e41", foreground="#ffffff")
         self.buttonAccept = Button(self.frameButtons2, text="  Aceptar  ", pady=10, padx=5, command=lambda: accept(self),
                                    bg='#109401', foreground="#ffffff")
-        self.buttonCancel = Button(self.frameButtons2, text="  Cancelar  ", pady=10, padx=5, command=lambda: cancel(self),
+        self.buttonCancel = Button(self.frameButtons2, text="  Borrar  ", pady=10, padx=5, command=lambda: cancel(self),
                                    bg='#ad0205', foreground="#ffffff")
         # Cuadricula los botones
         self.buttonCemita.grid(row=0, column=0, padx=10, pady=10)

@@ -25,7 +25,7 @@ def openList():
 # main
 if __name__ == '__main__':
     root = Tk()
-    root.title("Proyecto V0.9.5")
+    root.title("Proyecto v1.0")
 
     # Marco principal de la pantalla
     frameMain = Frame(root, height=400, width=800, bg="#344e41")
