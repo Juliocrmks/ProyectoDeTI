@@ -1,10 +1,8 @@
 from tkinter import *
 import json
-import random
 import datetime
 from OK import oki
-import sys
-import os
+
 
 
 def agregar_cemita(self):
@@ -143,12 +141,27 @@ def generate_id(self):
 
 
 def saveToJson(self):
+    today = datetime.datetime.now()
+    x = today.strftime("%Y")
+    if x == "2020":
+        filename = "2020.json"
+    elif x == "2021":
+        filename = "2021.json"
+    elif x == "2022":
+        filename = "2022.json"
+    elif x == "2023":
+        filename = "2023.json"
+    elif x == "2024":
+        filename = "2024.json"
+    elif x == "2025":
+        filename = "2025.json"
+    elif x == "2026":
+        filename = "2026.json"
     id = generate_id(self)
-    filename = "jsontest.json"
     platillo = {}
     pedido = {}
     lista =[]
-    i = 0
+    i = 1
     for item in self.orden:
         platillo['item' + str(i)] = item
         i=i+1
@@ -157,11 +170,6 @@ def saveToJson(self):
     self.orden[-1] = totalDict
     lista.append(totalDict)
     print(totalDict)
-
-
-
-
-
 
     pedido[id] = lista
     with open(filename,'r+') as read_file:
@@ -173,7 +181,7 @@ def saveToJson(self):
     
 
 
-#no se usa
+# no se usa
 def imprimirRegistros(self):
      filename = "jsontest.json"
      with open(filename, "r+") as f:

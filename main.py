@@ -19,7 +19,7 @@ def openList():
 
 if __name__ == '__main__':
     root = Tk()
-    root.title("Proyecto V0.6")
+    root.title("Proyecto V0.9.5")
 
     frameMain = Frame(root, height=400, width=800, bg="#344e41")
     frameMain.rowconfigure(3)
@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
     frameTitle = Frame(frameMain, bg="#344e41")
 
-    labelTitle = Label(frameTitle, text="Nombre \ndel\n Negocio", bg='#344e41', foreground='#ffffff', relief='raised',
+    labelTitle = Label(frameTitle, text="Antojitos\nPoblanos", bg='#344e41', foreground='#ffffff', relief='raised',
                        font=('Arial', 22))
 
     frameButtons = Frame(frameMain, bg="#344e41")
